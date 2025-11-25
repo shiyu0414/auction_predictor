@@ -4,4 +4,19 @@ server:
   run:
     host: 0.0.0.0
     port: 9999
-    reload: False
+    reload: True
+
+database:
+  mysql:
+    user: root
+    password: Ccec@2021
+    host: 39.105.156.6
+    port: 3306
+    database: auction_predictor
+    engine_options:
+      pool_size: 10
+      max_overflow: 20
+      pool_pre_ping: true
+    session_options:
+      autocommit: false
+      autoflush: false

@@ -1,7 +1,11 @@
 fastapi>=0.103.1
-uvicorn>=0.23.2
+uvicorn[standard]>=0.23.2
 ruamel.yaml>=0.17.21
-pydantic>=1.9.0
+pydantic>=2.0.0
 locust>=2.2.3
 pymongo>=3.10.1
 colorlog>=6.7.0
+sqlalchemy>=2.0.0
+pymysql>=1.0.2
+python-multipart>=0.0.6
+typing_extensions>=4.8.0
