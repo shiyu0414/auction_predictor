@@ -8,8 +8,8 @@ from util.data_model import BaseRes, VersionRes, DataReq, DataRes
 from util.conf import get_conf
 from util.log import get_logger
 from util.db import test_connection
-# 正确的导入方式
-from server.routes import users_router
+# 导入路由
+from server.routes import users_router, auction_router
 
 # 初始化配置和日志
 logger = get_logger("server.main")
@@ -27,6 +27,9 @@ app = FastAPI(
 # 注册路由
 app.include_router(users_router)
 logger.info("Users router registered")
+
+app.include_router(auction_router)
+logger.info("Auction router registered")
 
 # 打印所有注册的路由进行调试
 for route in app.routes:
